@@ -10,17 +10,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SlideComponent } from './components/slide/slide.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatButtonModule } from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     SlideComponent,
-    LoginComponent
+    LoginComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -29,10 +33,11 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     FlexLayoutModule,
     MatButtonModule,
-    HttpClientModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
