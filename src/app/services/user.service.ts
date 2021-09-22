@@ -18,4 +18,9 @@ export class UserService
   {
     return this.httpService.Post("Customer", data, null, false);
   }
+
+  forget(data: any)
+  {
+    return this.httpService.Post("Customer/forgetpassword", data, null, false);
+  }
 }
