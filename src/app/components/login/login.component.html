@@ -1,18 +1,24 @@
-<form action="">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="fields" fxLayout="column">
         <span>Email Id</span>
-        <mat-form-field appearance="outline">
-            <input matInput>
+        <mat-form-field appearance="outline" class="form-field">
+            <input matInput formControlName="email">
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <mat-error *ngIf="f.email.errors.required">Email is required</mat-error>
+            </div>
         </mat-form-field>
 
         <span>Password</span>
-        <mat-form-field appearance="outline">
-            <input matInput>
+        <mat-form-field appearance="outline" class="form-field">
+            <input matInput formControlName="password" input type="password">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
+            </div>
         </mat-form-field>
         <span class="forget-password-text">Forget Password?</span>
     </div>
     <div>
-        <button class="login-button" mat-flat-button>Login</button>
+        <button class="login-button" mat-flat-button (click)="onSubmit()">Login</button>
     </div>
 </form>
 <div class="below-container">

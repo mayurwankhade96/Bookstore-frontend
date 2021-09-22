@@ -10,6 +10,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SlideComponent } from './components/slide/slide.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatFormFieldModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

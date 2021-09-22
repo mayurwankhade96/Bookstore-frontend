@@ -1,27 +1,38 @@
-<form action="">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="fields" fxLayout="column">
         <span>Full Name</span>
-        <mat-form-field appearance="outline">
-            <input matInput>
-            <mat-hint>Enter full name</mat-hint>
+        <mat-form-field appearance="outline" class="form-field">
+            <input matInput formControlName="fullName">
+            <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+                <mat-error *ngIf="f.fullName.errors.required">Enter full name</mat-error>
+            </div>
         </mat-form-field>
 
         <span>Email Id</span>
-        <mat-form-field appearance="outline">
-            <input matInput>
+        <mat-form-field appearance="outline" class="form-field">
+            <input matInput formControlName="email">
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <mat-error *ngIf="f.email.errors.required">Email is required</mat-error>
+            </div>
         </mat-form-field>
 
         <span>Password</span>
-        <mat-form-field appearance="outline">
-            <input matInput>
+        <mat-form-field appearance="outline" class="form-field">
+            <input matInput formControlName="password">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
+            </div>
         </mat-form-field>
 
         <span>Mobile Number</span>
-        <mat-form-field appearance="outline">
-            <input matInput>
+        <mat-form-field appearance="outline" class="form-field">
+            <input matInput formControlName="mobileNumber">
+            <div *ngIf="submitted && f.mobileNumber.errors" class="invalid-feedback">
+                <mat-error *ngIf="f.mobileNumber.errors.required">Password is required</mat-error>
+            </div>
         </mat-form-field>
     </div>
     <div>
-        <button mat-flat-button>Signup</button>
+        <button mat-flat-button (click)="onSubmit()">Signup</button>
     </div>
 </form>
