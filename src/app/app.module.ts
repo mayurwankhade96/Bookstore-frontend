@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     SignupComponent,
     SlideComponent,
     LoginComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

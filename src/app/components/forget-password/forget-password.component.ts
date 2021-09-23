@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class ForgetPasswordComponent implements OnInit
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService) { }
+    private userService: UserService,
+    private route: Router) { }
 
   ngOnInit(): void
   {
@@ -40,5 +42,10 @@ export class ForgetPasswordComponent implements OnInit
     }
 
     this.userService.forget(requestFields).subscribe(response => console.log(response));
+  }
+
+  onSignup()
+  {
+    this.route.navigateByUrl('signup');
   }
 }

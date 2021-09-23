@@ -3,10 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SlideComponent } from './components/slide/slide.component';
 
 const routes: Routes = [
-  { path: 'signup', component: SignupComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: '', component: SlideComponent,
+    children: [
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent }
+    ]
+  },
   { path: 'forget-password', component: ForgetPasswordComponent }
 ];
 
