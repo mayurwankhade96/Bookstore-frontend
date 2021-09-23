@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DisplayBooksComponent } from './components/display-books/display-books.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -16,7 +17,13 @@ const routes: Routes = [
     ]
   },
   { path: 'forget-password', component: ForgetPasswordComponent },
-  { path: 'home', component: DashboardComponent }
+  {
+    path: 'home', component: DashboardComponent,
+    children: [
+      { path: '', redirectTo: 'books', pathMatch: 'full' },
+      { path: 'books', component: DisplayBooksComponent }
+    ]
+  },
 ];
 
 @NgModule({

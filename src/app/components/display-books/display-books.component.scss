@@ -1,0 +1,77 @@
+.upper-section{
+    margin-top: 20px;
+    margin-left: 235px;
+    margin-right: 250px;
+}
+
+.below-section{
+    margin-top: 20px;
+    margin-left: 235px;
+    margin-right: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.books-text{
+    font-size: 30px;
+}
+
+::ng-deep.mat-form-field-appearance-outline .mat-form-field-wrapper{
+    padding: 0px;
+}
+
+::ng-deep.mat-form-field-appearance-outline .mat-form-field-infix{
+    padding: 0px;
+    margin: 0px;
+}
+
+::ng-deep.mat-form-field-appearance-outline .mat-form-field-flex{
+    height: 40px;
+    border-radius: 1px;
+}
+
+.books{
+    width: 235px;
+    height: 275px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    margin-bottom: 27px;
+}
+
+.book-image{
+    width: 233px;
+    height: 172px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 2px 2px 0px 0px;
+}
+
+.book-info{
+    margin-left: 15px;
+}
+
+span{
+    margin: 0px auto;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 9px;
+}
+
+p{
+    font-size: 10px;
+    margin: 0px auto;
+    letter-spacing: 0px;
+    color: #878787;
+}
+
+.star{
+    width: 33px;
+    height: 16px;
+    background: #388E3C 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    color:#F5F5F5;
+}
+
+h4{
+    font-weight: 500;
+}

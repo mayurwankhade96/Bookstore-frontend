@@ -17,6 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DisplayBooksComponent } from './components/display-books/display-books.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -26,7 +30,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     SlideComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    DisplayBooksComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatInputModule,
     MatIconModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDividerModule,
+    MatListModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

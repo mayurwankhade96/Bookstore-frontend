@@ -16,4 +16,9 @@ export class HttpService
   {
     return this.http.post(this.baseUrl + url, data);
   }
+
+  getBooks(url: any)
+  {
+    return this.http.get(this.baseUrl + url)
+  }
 }
