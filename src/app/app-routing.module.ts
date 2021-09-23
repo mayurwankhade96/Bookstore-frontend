@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
       { path: 'signup', component: SignupComponent }
     ]
   },
-  { path: 'forget-password', component: ForgetPasswordComponent }
+  { path: 'forget-password', component: ForgetPasswordComponent },
+  { path: 'home', component: DashboardComponent }
 ];
 
 @NgModule({
