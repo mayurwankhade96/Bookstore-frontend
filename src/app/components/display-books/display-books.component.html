@@ -1,7 +1,7 @@
 <div class="container">
     <div class="upper-section" fxLayout="row" fxLayoutAlign="space-between center">
         <div class="book-count">
-            <span class="books-text">Books</span>
+            <span class="books-text">Books<span class="book-count">({{books.length}} items)</span></span>
         </div>
         <div class="order">
             <mat-form-field appearance="outline">
@@ -13,19 +13,19 @@
     </div>
     <div class="below-section" fxLayoutGap="28px">
         <div class="books" *ngFor="let book of books">
-            <div class="single-book" fxLayout="column">
-                <div class="book-image" fxLayoutAlign="center center">
+            <div class="single-book" fxLayout="column" (click)="quickView(book)">
+                <div class="book-image" fxLayoutAlign="center center" matTooltip="QUICK VIEW">
                     <img src={{book.bookImage}} alt="">
                 </div>
-                <div class="book-info" fxLayout="column">
-                    <div>
+                <div class="book-info" fxLayout="column" fxLayoutGap="6px">
+                    <div class="book-name">
                         <span>{{book.bookTitle}}</span>
                         <p>by {{book.authorName}}</p>
                     </div>
-                    <div class="rating" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
-                        <div class="star" fxLayout="row">
-                            {{book.rating}}
-                            <img src="../../../assets/star_white_24dp.svg" alt="">
+                    <div class="rating" fxLayout="row" fxLayoutAlign="start center">
+                        <div class="star" fxLayout="row" fxLayoutAlign="center center">
+                            <p class="rating-star">{{book.rating}}</p>
+                            <img class="star-image" src="../../../assets/star_white_24dp.svg" alt="">
                         </div>
                         <div class="people">
                             <p>(20)</p>

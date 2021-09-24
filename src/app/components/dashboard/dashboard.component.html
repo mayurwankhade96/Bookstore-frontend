@@ -1,30 +1,7 @@
 <div class="container">
-    <div class="header" fxLayout="row">
-        <div class="logo" fxLayoutAlign="space-between center" fxLayoutGap="5.98px">
-            <img class="logo-image" src="../../../assets/education.svg" alt="">
-            <span class="logo-text">Bookstore</span>
-        </div>
-
-        <div class="search-bar" fxLayout="row">
-            <img class="search-image" src="../../../assets/search_black_24dp.svg" alt="">
-            <p>Search...</p>
-        </div>
-
-        <div class="profile-and-cart" fxLayout="row" fxLayoutGap="40px">
-            <div class="profile" fxLayout="column" fxLayoutAlign="center center">
-                <img class="p-image p-and-c-image" src="../../../assets/person_outline_white_24dp.svg" alt="">
-                <span>Profile</span>
-            </div>
-            <div class="cart" fxLayout="column" fxLayoutAlign="center center">
-                <img class="p-and-c-image" src="../../../assets/supermarket.svg" alt="">
-                <span>Cart</span>
-            </div>
-        </div>
-    </div>
+    <app-header></app-header>
     <div class="inner-container">
         <router-outlet></router-outlet>
     </div>
-    <div class="footer" fxLayout="row" fxLayoutAlign="none center">
-        <span class="footer-text">Copyright &copy; 2020, Bookstore Private Limited. All Rights Reserved</span>
-    </div>
+    <app-footer></app-footer>
 </div>

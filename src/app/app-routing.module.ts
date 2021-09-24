@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BookComponent } from './components/book/book.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayBooksComponent } from './components/display-books/display-books.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'books', component: DisplayBooksComponent }
     ]
   },
+  { path: 'quick-view', component: BookComponent }
 ];
 
 @NgModule({

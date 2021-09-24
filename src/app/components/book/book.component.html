@@ -1,0 +1,81 @@
+<app-header></app-header>
+<div class="container">
+    <div class="home-count">
+        <span class="home" routerLink="/home">Home /</span><span class="book-id"> Book({{book.bookId}})</span>
+    </div>
+    <div class="book-info">
+        <div class="images" fxLayout="row">
+            <div class="small-images" fxLayout="column">
+                <div class="border-change-small-img" fxLayoutAlign="center center">
+                    <img src="../../../assets/Image 1.png" alt="">
+                </div>
+                <div class="small-img" fxLayoutAlign="center center">
+                    <img src="../../../assets/Image 46.png" alt="">
+                </div>
+            </div>
+            <div class="image-buttons" fxLayout="column">
+                <div class="main-img" fxLayoutAlign="center center">
+                    <img class="book-image" src="{{book.bookImage}}" alt="">
+                </div>
+                <div class="buttons" fxLayout="row" fxLayoutAlign="space-between center">
+                    <button class="img-button1" mat-raised-button><span class="button-text">ADD TO BAG</span></button>
+                    <button class="img-button2" mat-raised-button><img src="../../../assets/favorite_white_24dp.svg"
+                            alt=""><span class="button-text">
+                            WISHLIST</span></button>
+                </div>
+            </div>
+            <div class="book-description" fxLayout="column">
+                <div class="name">
+                    <p class="book-name">{{book.bookTitle}}</p>
+                    <p class="author-name">by {{book.authorName}}</p>
+                </div>
+                <div class="rating" fxLayout="row" fxLayoutAlign="start center">
+                    <div class="star" fxLayout="row">
+                        <p class="rating-star">{{book.rating}}</p>
+                        <img class="star-image" src="../../../assets/star_white_24dp.svg" alt="">
+                    </div>
+                    <div class="people">
+                        <p class="no-of-people">(20)</p>
+                    </div>
+                </div>
+                <div class="price-section" fxLayout="row" fxLayoutGap="14px">
+                    <h1 class="price-value">RS. {{book.bookPrice}}</h1>
+                    <del>
+                        <p class="cut-price">RS. 2000</p>
+                    </del>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="description" fxLayout="column">
+                    <ul>
+                        <li class="book-detail">Book Detail</li>
+                    </ul>
+                    <div class="details">
+                        <p class="book-para">{{book.description}}</p>
+                    </div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="feedback" fxLayout="column">
+                    <p class="customer-feedback">Customer Feedback</p>
+                    <div class="rating-div">
+                        <div class="inner-rating">
+                            <p class="overall-rating">Overall rating</p>
+                            <div class="stars" fxLayout="row">
+                                <img class="five-stars" src="../../../assets/star_border_black_24dp.svg" alt="">
+                                <img class="five-stars" src="../../../assets/star_border_black_24dp.svg" alt="">
+                                <img class="five-stars" src="../../../assets/star_border_black_24dp.svg" alt="">
+                                <img class="five-stars" src="../../../assets/star_border_black_24dp.svg" alt="">
+                                <img class="five-stars" src="../../../assets/star_border_black_24dp.svg" alt="">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" placeholder="Write your review">
+                            </div>
+                            <div fxLayoutAlign="end center">
+                                <button class="submit-button">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

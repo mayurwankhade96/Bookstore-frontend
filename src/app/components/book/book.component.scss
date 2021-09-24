@@ -1,0 +1,240 @@
+.container{
+    margin: 36px 235px 0px 235px;
+}
+
+.home-count{
+    margin-bottom: 32px;
+}
+.home{
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #9D9D9D;
+    cursor: pointer;
+}
+
+.book-id{
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px; 
+}
+
+.book-info{
+    
+}
+
+.border-change-small-img{
+    width: 44px;
+    height: 54px;
+    background: #FFE7E9 0% 0% no-repeat padding-box;
+    border: 1px solid #7C1E1E;
+    border-radius: 1px 1px 1px 0px;
+}
+
+.small-img{
+    width: 44px;
+    height: 54px;
+    border: 1px solid #D1D1D1;
+    border-radius: 0px 1px 1px 1px;
+}
+
+.main-img{
+    width: 361px;
+    height: 413px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #D1D1D1;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    margin-right: 50.5px;
+}
+
+.book-image{
+    height: 367px;
+}
+
+.img-button1{
+    width: 170px;
+    height: 40px;
+    background: #A03037 0% 0% no-repeat padding-box;
+    border-radius: 2px;    
+}
+
+.img-button2{
+    width: 170px;
+    height: 40px;
+    background: #333333 0% 0% no-repeat padding-box;
+    border-radius: 2px;   
+}
+
+.button-text{
+    text-align: left;
+    font: normal normal medium 15px/18px Lato;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.buttons{
+    width: 361px;
+}
+
+.book-description{
+    width: 551px;
+}
+
+.star-image{   
+    width: 11px;
+    height: 11px;
+    margin: 7.33px 0px 7.06px 5.5px;
+}
+
+.rating-star{    
+    text-align: left;
+    font: normal normal bold 14px/19px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin: 3px 0px 3px 9px;
+}
+
+.star{
+    color:#F5F5F5;
+    width: 55px;
+    height: 25px;
+    background: #388E3C 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    margin-bottom: 15px;
+}
+
+.book-name{
+    text-align: left;
+    font: normal normal normal 28px/37px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    margin-bottom: 3px;
+}
+
+.author-name{
+    text-align: left;
+    font: normal normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    margin-bottom: 10px;
+}
+
+.no-of-people{
+    text-align: left;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    padding-bottom: 3px;
+    margin-left: 11px;
+}
+
+.cut-price{
+    text-align: left;   
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    padding-top: 5px;
+    margin-left: 14px;
+}
+
+.price-value{
+    text-align: left;
+    font: normal normal medium 30px/39px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    font-weight: 500;
+}
+
+.book-detail{
+    text-align: left;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+}
+
+ul{
+    padding-left: 15px;
+}
+
+.book-para{
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #373434;
+}
+
+.customer-feedback{
+    text-align: left;
+    font: normal normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    margin-top: 17px;
+}
+
+.rating-div{
+    width: 557px;
+    height: 192px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+}
+
+.overall-rating{
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.input-box{
+    width: 527px;
+    height: 63px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+}
+
+input{
+    width: 300px;
+    height: 31px;
+    text-align: left;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 0.18;
+    border: none;
+}
+
+.submit-button{
+    width: 76px;
+    height: 24px;
+    background: #3371B5 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    margin-top: 14px;
+    margin-right: 16px;
+    font: normal normal normal 14px/19px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    border: none;
+}
+
+// ::ng-deep span.mat-button-wrapper{
+//     text-align: left;
+//     font: normal normal normal 14px/19px Roboto;
+//     letter-spacing: 0px;
+//     color: #FFFFFF;
+// }
+
+.inner-rating{
+    margin-left: 17px;
+}
+
+.five-stars{
+    opacity: 0.5;
+}
+
+.stars{
+    margin-bottom: 14px;
+}

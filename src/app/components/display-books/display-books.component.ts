@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BooksService } from 'src/app/services/books.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-display-books',
@@ -9,8 +11,11 @@ import { BooksService } from 'src/app/services/books.service';
 export class DisplayBooksComponent implements OnInit
 {
   books: any;
+  bookId: any;
 
-  constructor(private bookService: BooksService) { }
+  constructor(private bookService: BooksService,
+    private dataService: DataService,
+    private route: Router) { }
 
   ngOnInit(): void
   {
@@ -25,5 +30,11 @@ export class DisplayBooksComponent implements OnInit
       this.books = response.data;
       console.log(this.books);
     })
+  }
+
+  quickView(book: any)
+  {
+    this.dataService.sendBooks(book);
+    this.route.navigateByUrl('quick-view');
   }
 }

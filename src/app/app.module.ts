@@ -21,6 +21,10 @@ import { DisplayBooksComponent } from './components/display-books/display-books.
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { BookComponent } from './components/book/book.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -31,7 +35,10 @@ import { MatSelectModule } from '@angular/material/select';
     LoginComponent,
     ForgetPasswordComponent,
     DashboardComponent,
-    DisplayBooksComponent
+    DisplayBooksComponent,
+    BookComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatToolbarModule,
     MatDividerModule,
     MatListModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
