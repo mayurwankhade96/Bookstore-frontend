@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit
 {
   loginForm!: FormGroup;
   submitted = false;
+  show: boolean = true;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -42,6 +43,11 @@ export class LoginComponent implements OnInit
       password: this.loginForm.value.password
     }
 
-    this.userService.login(requestFields).subscribe(response => console.log(response));
+    this.userService.login(requestFields).subscribe((response: any) => 
+    {
+      console.log(response);
+      localStorage.setItem('token', response['token']);
+      this.route.navigate(['home']);
+    });
   }
 }

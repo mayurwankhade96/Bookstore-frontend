@@ -18,7 +18,8 @@
 
         <span>Password</span>
         <mat-form-field appearance="outline" class="form-field">
-            <input matInput formControlName="password">
+            <input matInput formControlName="password" [type]="show ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="show = !show">{{show ? 'visibility_off' : 'visibility'}}</mat-icon>
             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                 <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
             </div>

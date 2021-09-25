@@ -24,7 +24,7 @@ export class SlideComponent implements OnInit
 
   onLogin()
   {
-    this.signupVisibility = true;
+    this.signupVisibility = false;
     this.route.navigateByUrl('login');
   }
 }

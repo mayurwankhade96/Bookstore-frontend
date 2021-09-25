@@ -8,15 +8,15 @@
         <div class="choice" fxLayout="row" fxLayoutAlign="space-evenly center">
             <div class="login" fxLayout="column" (click)=onLogin()>
                 <div class="login-underline">
-                    <h1 class="heading-color">LOGIN</h1>
-                    <div class="underline"></div>
+                    <h1 [ngClass]="{'heading-color':signupVisibility===true}">LOGIN</h1>
+                    <div [ngClass]="{'underline':signupVisibility===false}"></div>
                 </div>
             </div>
 
             <div class="signup" fxLayout="column" (click)=onSignup()>
                 <div class="signup-underline">
-                    <h1 class="heading-color">SIGNUP</h1>
-                    <div class="underline"></div>
+                    <h1 [ngClass]="{'heading-color':signupVisibility===false}">SIGNUP</h1>
+                    <div [ngClass]="{'underline':signupVisibility===true}"></div>
                 </div>
             </div>
         </div>

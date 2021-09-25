@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -9,11 +10,13 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class SignupComponent implements OnInit
 {
-
   registerForm!: FormGroup;
   submitted = false;
+  show: boolean = true;
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService) { }
+  constructor(private formBuilder: FormBuilder,
+    private userService: UserService,
+    private route: Router) { }
 
   ngOnInit(): void
   {
@@ -43,6 +46,10 @@ export class SignupComponent implements OnInit
       mobileNumber: this.registerForm.value.mobileNumber
     }
 
-    this.userService.signup(requestFields).subscribe(response => console.log(response));
+    this.userService.signup(requestFields).subscribe((response: any) => 
+    {
+      console.log(response);
+      this.route.navigate(['login']);
+    });
   }
 }
