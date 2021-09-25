@@ -227,3 +227,32 @@ input{
 .stars{
     margin-bottom: 14px;
 }
+
+.middle-div{
+    width: 66px;
+    height: 38px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+}
+
+.img-button3{
+    width: 159px;
+    height: 38px;
+    background-color: white;
+    border: none;
+}
+
+.decrease-count{
+    width: 38px;
+    height: 38px;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    opacity: 0.5;    
+}
+
+.increase-count{
+    width: 34px;
+    height: 34px;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+    border-radius: 50px;
+}

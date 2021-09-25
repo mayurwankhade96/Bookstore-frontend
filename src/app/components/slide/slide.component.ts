@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class SlideComponent implements OnInit
 {
-  signupVisibility: boolean = true;
+  signupVisibility: boolean = false;
 
   constructor(private route: Router) { }
 

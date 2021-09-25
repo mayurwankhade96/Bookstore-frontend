@@ -18,7 +18,24 @@
                     <img class="book-image" src="{{book.bookImage}}" alt="">
                 </div>
                 <div class="buttons" fxLayout="row" fxLayoutAlign="space-between center">
-                    <button class="img-button1" mat-raised-button><span class="button-text">ADD TO BAG</span></button>
+                    <button class="img-button1" mat-raised-button *ngIf="!bookIntoCart" (click)="addToCart()"><span
+                            class="button-text">ADD TO
+                            BAG</span></button>
+
+                    <button class="img-button3" *ngIf="bookIntoCart" fxLayout="row" fxLayoutAlign="space-between center"
+                        fxLayoutGap="8px">
+                        <div>
+                            <img src="../../../assets/remove_circle_outline_black_24dp.svg" alt=""
+                                class="decrease-count">
+                        </div>
+                        <div class="middle-div" fxLayoutAlign="center center">
+                            1
+                        </div>
+                        <div class="increase-count" fxLayoutAlign="center center">
+                            <img src="../../../assets/add_black_24dp.svg" alt="">
+                        </div>
+                    </button>
+
                     <button class="img-button2" mat-raised-button><img src="../../../assets/favorite_white_24dp.svg"
                             alt=""><span class="button-text">
                             WISHLIST</span></button>

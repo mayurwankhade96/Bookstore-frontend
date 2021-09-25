@@ -25,6 +25,7 @@ import { BookComponent } from './components/book/book.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FooterComponent } from './components/footer/footer.component';
     DisplayBooksComponent,
     BookComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
