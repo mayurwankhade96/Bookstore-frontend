@@ -33,4 +33,26 @@ export class HttpService
     }
     return this.http.post(this.baseUrl + url, data, Options);
   }
+
+  removeFromCart(data: any)
+  {
+    this.token = localStorage.getItem('token');
+    var headerObject = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+    let Options = {
+      headers: headerObject,
+      'Content-Type': 'application/json'
+    }
+    return this.http.delete(this.baseUrl + `Carts?cartId=${data}`, Options);
+  }
+
+  getCartBooks(url: any)
+  {
+    this.token = localStorage.getItem('token');
+    var headerObject = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+    let Options = {
+      headers: headerObject,
+      'Content-Type': 'application/json'
+    }
+    return this.http.get(this.baseUrl + url, Options);
+  }
 }
