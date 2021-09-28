@@ -55,4 +55,48 @@ export class HttpService
     }
     return this.http.get(this.baseUrl + url, Options);
   }
+
+  addTowishlist(url: any, data: any)
+  {
+    this.token = localStorage.getItem('token');
+    var headerObject = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+    let Options = {
+      headers: headerObject,
+      'Content-Type': 'application/json'
+    }
+    return this.http.post(this.baseUrl + url, data, Options);
+  }
+
+  removeFromWishlist(data: any)
+  {
+    this.token = localStorage.getItem('token');
+    var headerObject = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+    let Options = {
+      headers: headerObject,
+      'Content-Type': 'application/json'
+    }
+    return this.http.delete(this.baseUrl + `Wishlists?wishlistId=${data}`, Options);
+  }
+
+  getWishlistBooks(url: any)
+  {
+    this.token = localStorage.getItem('token');
+    var headerObject = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+    let Options = {
+      headers: headerObject,
+      'Content-Type': 'application/json'
+    }
+    return this.http.get(this.baseUrl + url, Options);
+  }
+
+  updateAddress(data: any)
+  {
+    this.token = localStorage.getItem('token');
+    var headerObject = new HttpHeaders().set("Authorization", "Bearer " + this.token);
+    let Options = {
+      headers: headerObject,
+      'Content-Type': 'application/json'
+    }
+    return this.http.put(this.baseUrl + `Addresses?addressId=${data}`, Options);
+  }
 }

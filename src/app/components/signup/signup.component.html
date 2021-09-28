@@ -29,7 +29,7 @@
         <mat-form-field appearance="outline" class="form-field">
             <input matInput formControlName="mobileNumber">
             <div *ngIf="submitted && f.mobileNumber.errors" class="invalid-feedback">
-                <mat-error *ngIf="f.mobileNumber.errors.required">Password is required</mat-error>
+                <mat-error *ngIf="f.mobileNumber.errors.required">Mobile number is required</mat-error>
             </div>
         </mat-form-field>
     </div>

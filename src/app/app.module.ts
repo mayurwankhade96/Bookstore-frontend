@@ -26,6 +26,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
 @NgModule({
@@ -40,10 +42,11 @@ import { CartComponent } from './components/cart/cart.component';
     BookComponent,
     HeaderComponent,
     FooterComponent,
-    CartComponent
+    CartComponent,
+    WishlistComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -57,7 +60,8 @@ import { CartComponent } from './components/cart/cart.component';
     MatDividerModule,
     MatListModule,
     MatSelectModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
