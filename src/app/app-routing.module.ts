@@ -6,6 +6,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayBooksComponent } from './components/display-books/display-books.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { LoginComponent } from './components/login/login.component';
+import { OrderComponent } from './components/order/order.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SlideComponent } from './components/slide/slide.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
@@ -29,13 +30,14 @@ const routes: Routes = [
     ]
   },
   { path: 'quick-view', component: BookComponent },
-  { path: 'wishlist', component: WishlistComponent }
+  { path: 'wishlist', component: WishlistComponent },
+  { path: 'order', component: OrderComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabled'
-})],
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

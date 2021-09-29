@@ -40,66 +40,76 @@
                 <button mat-button class="remove-button" (click)="removeFromCart(book.cartId)">Remove</button>
             </div>
         </div>
-        <button class="bottom-button"><span class="place-order-text">PLACE ORDER</span></button>
+        <button class="bottom-button"><span class="place-order-text" (click)="getAddress()">PLACE ORDER</span></button>
     </div>
 
-    <div class="customer-details">
-        <div class="headings" fxLayout="row" fxLayoutAlign="space-between start">
-            <span class="customer-detail-heading">Customer Details</span>
-            <button class="new-address-button"><span class="new-address-text">Add New Address</span></button>
-        </div>
+    <div class="only-for-view" fxLayoutAlign=" center" *ngIf="displayAddress">
+        <span class="only-for-view-text">Address Details</span>
+    </div>
 
-        <div class="address-part" fxLayout="column">
-            <div class="form-fields" fxLayout="row" fxLayoutGap="10px">
-                <div fxLayout="column">
-                    <span class="text-above-form-field">Full Name</span>
-                    <mat-form-field appearance="outline">
-                        <input matInput placeholder="">
-                    </mat-form-field>
-                </div>
-
-                <div fxLayout="column">
-                    <span class="text-above-form-field">Mobile Number</span>
-                    <mat-form-field appearance="outline">
-                        <input matInput placeholder="">
-                    </mat-form-field>
-                </div>
-            </div>
-            <div class="radio-button" fxLayoutAlign=" end" fxLayoutGap="20px">
-                <mat-radio-button value="1">1.WORK</mat-radio-button>
-                <span class="edit-button">Edit</span>
+    <div *ngIf="!displayAddress">
+        <div class="customer-details" *ngFor="let address of addresses">
+            <div class="headings" fxLayout="row" fxLayoutAlign="space-between start">
+                <span class="customer-detail-heading">Customer Details</span>
+                <button class="new-address-button"><span class="new-address-text">Add New Address</span></button>
             </div>
 
-            <div class="full-address" fxLayout="column" fxLayoutGap="10px">
-                <div class="main-address" fxLayout="column">
-                    <span class="text-above-form-field">Address</span>
-                    <input class="address-input" type="text">
-                </div>
-                <div class="city-state-fields" fxLayout="row" fxLayoutGap="10px">
+            <div class="address-part" fxLayout="column">
+                <div class="form-fields" fxLayout="row" fxLayoutGap="10px">
                     <div fxLayout="column">
-                        <span class="text-above-form-field">city/town</span>
-                        <input class="city-state" type="text">
+                        <span class="text-above-form-field">Full Name</span>
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="" value="{{address.fullName}}">
+                        </mat-form-field>
                     </div>
 
                     <div fxLayout="column">
-                        <span class="text-above-form-field">State</span>
-                        <input class="city-state" type="text">
+                        <span class="text-above-form-field">Mobile Number</span>
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="" value="{{address.mobileNumber}}">
+                        </mat-form-field>
                     </div>
                 </div>
-            </div>
-
-            <div class="address-suggest" fxLayout="column">
-                <mat-radio-button value="1">2.Home</mat-radio-button>
-                <div class="main-address" fxLayout="column">
-                    <span class="text-above-form-field">Address</span>
-                    <input class="suggestion-input" type="text">
+                <div class="radio-button" fxLayoutAlign=" end" fxLayoutGap="20px">
+                    <mat-radio-button value="1">1.WORK</mat-radio-button>
+                    <span class="edit-button">Edit</span>
                 </div>
-                <button class="continue-button">CONTINUE</button>
+
+                <div class="full-address" fxLayout="column" fxLayoutGap="10px">
+                    <div class="main-address" fxLayout="column">
+                        <span class="text-above-form-field">Address</span>
+                        <input class="address-input" type="text" value=" {{address.address}}">
+                    </div>
+                    <div class="city-state-fields" fxLayout="row" fxLayoutGap="10px">
+                        <div fxLayout="column">
+                            <span class="text-above-form-field">city/town</span>
+                            <input class="city-state" type="text" value=" {{address.city}}">
+                        </div>
+
+                        <div fxLayout="column">
+                            <span class="text-above-form-field">State</span>
+                            <input class="city-state" type="text" value=" {{address.state}}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="address-suggest" fxLayout="column">
+                    <mat-radio-button value="1">2.Home</mat-radio-button>
+                    <div class="main-address" fxLayout="column">
+                        <span class="text-above-form-field">Address</span>
+                        <input class="suggestion-input" type="text">
+                    </div>
+                    <button class="continue-button" (click)="submit()">CONTINUE</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="order-summary">
+    <div class="view only-for-view" fxLayoutAlign=" center" *ngIf="displayCart">
+        <span class="only-for-view-text">Order Summery</span>
+    </div>
+
+    <div class="order-summary" *ngIf="!displayCart">
         <div class="summery-text">
             <span class="order-summery-text customer-detail-heading">Order summery</span>
         </div>
@@ -119,7 +129,8 @@
                     </div>
                 </div>
             </div>
+            <button class="checkout-button"><span class="place-order-text" routerLink="/order"
+                    (click)="removeFromCart(book.cartId)">CHECKOUT</span></button>
         </div>
-        <button class="bottom-button"><span class="place-order-text">CHECKOUT</span></button>
     </div>
 </div>

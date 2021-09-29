@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { response } from 'express';
+import { AddressService } from 'src/app/services/address.service';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -11,9 +13,14 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit
 {
   cart: any;
-  cartId: any;
+  addresses: any;
+  displayAddress = true;
+  // displayButton = true;
+  displayCart = true;
+  // displayContinueButton = true;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+    private addressService: AddressService) { }
 
   ngOnInit(): void
   {
@@ -37,5 +44,21 @@ export class CartComponent implements OnInit
       console.log(response);
       this.ngOnInit();
     });
+  }
+
+  getAddress()
+  {
+    this.addressService.getCustomerAddress('Addresses').subscribe((response: any) =>
+    {
+      console.log(response);
+      this.addresses = response.data;
+      console.log(this.addresses);
+      this.displayAddress = !this.displayAddress;
+    })
+  }
+
+  submit()
+  {
+    this.displayCart = !this.displayCart;
   }
 }

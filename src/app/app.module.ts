@@ -28,6 +28,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { OrderComponent } from './components/order/order.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
     HeaderComponent,
     FooterComponent,
     CartComponent,
-    WishlistComponent
+    WishlistComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

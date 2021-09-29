@@ -8,8 +8,8 @@ export class AddressService
 {
   constructor(private httpService: HttpService) { }
 
-  updateAddress(data: any)
+  getCustomerAddress(url: any)
   {
-    this.httpService.updateAddress(data);
+    return this.httpService.getAddress(url);
   }
 }

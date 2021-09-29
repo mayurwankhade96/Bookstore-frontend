@@ -89,7 +89,7 @@ export class HttpService
     return this.http.get(this.baseUrl + url, Options);
   }
 
-  updateAddress(data: any)
+  getAddress(url: any)
   {
     this.token = localStorage.getItem('token');
     var headerObject = new HttpHeaders().set("Authorization", "Bearer " + this.token);
@@ -97,6 +97,6 @@ export class HttpService
       headers: headerObject,
       'Content-Type': 'application/json'
     }
-    return this.http.put(this.baseUrl + `Addresses?addressId=${data}`, Options);
+    return this.http.get(this.baseUrl + url, Options);
   }
 }
