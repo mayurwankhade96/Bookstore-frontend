@@ -11,6 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 export class DisplayBooksComponent implements OnInit
 {
   books: any;
+  p: number = 1;
   // bookId: any;
 
   constructor(private bookService: BooksService,

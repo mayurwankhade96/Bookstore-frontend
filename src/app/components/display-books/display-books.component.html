@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="below-section" fxLayoutGap="28px">
-        <div class="books" *ngFor="let book of books">
+        <div class="books" *ngFor="let book of books | paginate: { itemsPerPage: 12, currentPage: p }">
             <div class="single-book" fxLayout="column" (click)="quickView(book)">
                 <div class="book-image" fxLayoutAlign="center center" matTooltip="QUICK VIEW">
                     <img src={{book.bookImage}} alt="">
@@ -40,5 +40,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="pagination" fxLayoutAlign="center center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
 </div>
