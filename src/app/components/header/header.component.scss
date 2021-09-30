@@ -60,6 +60,7 @@ span{
     height: 150px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
+    border: none;
 }
 
 .welcome{
@@ -89,6 +90,7 @@ span{
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .login-button{
@@ -121,4 +123,32 @@ span{
     height: 11px;
     margin-top: 2px;
     color: #878787;
+}
+
+.logout-button{
+    width: 123px;
+    height: 33px;
+    border: 1px solid #A03037;
+    border-radius: 2px;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #A03037;
+    margin-left: 20px;
+    background-color: #FFFFFF;
+}
+
+.box-after-login{
+    width: 160px;
+    height: 140px;
+}
+
+@media only screen and (max-width:799px) {  
+    .profile-and-cart{
+        margin: 0 auto;
+    }
+
+    .logo-image{
+        margin: 0px auto;
+        margin-left: 10px;
+    }
 }

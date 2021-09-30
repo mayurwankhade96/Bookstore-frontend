@@ -111,6 +111,23 @@ h4{
     margin-left: 10px;
 }
 
-.pagination{
-    
+@media only screen and (max-width:799px) {  
+    .upper-section, .below-section{
+        margin: 0 auto;
+        
+    }
+
+    .upper-section{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 60px;
+    }
+
+    .order{
+        margin-top: 20px;
+    }
+
+    .below-section{
+       margin: 30px 60px;
+    }
 }

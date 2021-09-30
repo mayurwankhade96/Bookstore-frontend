@@ -30,6 +30,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { OrderComponent } from './components/order/order.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MatSelectModule,
     MatTooltipModule,
     MatRadioModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
