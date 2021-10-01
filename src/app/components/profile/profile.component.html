@@ -10,19 +10,19 @@
             <span class="edit-button">Edit</span>
         </div>
         <div class="input-fields" fxLayout="column" fxLayoutGap="10px">
-            <div fxLayout="column">
+            <div fxLayout="column" fxLayoutGap="6px">
                 <span class="form-instruction">Full Name</span>
                 <input class="personal-detail-input" type="text">
             </div>
-            <div fxLayout="column">
+            <div fxLayout="column" fxLayoutGap="6px">
                 <span class="form-instruction">Email Id</span>
                 <input class="personal-detail-input" type="text">
             </div>
-            <div fxLayout="column">
+            <div fxLayout="column" fxLayoutGap="6px">
                 <span class="form-instruction">Password</span>
                 <input class="personal-detail-input" type="text">
             </div>
-            <div fxLayout="column">
+            <div fxLayout="column" fxLayoutGap="6px">
                 <span class="form-instruction">Mobile Number</span>
                 <input class="personal-detail-input" type="text">
             </div>
@@ -35,40 +35,41 @@
             </div>
 
             <div class="address-part" fxLayout="column">
-                <div class="radio-button" fxLayoutAlign=" end" fxLayoutGap="20px">
+                <!-- <div class="radio-button" fxLayoutAlign=" end" fxLayoutGap="20px">
                     <mat-radio-button value="1">1.WORK</mat-radio-button>
                     <span class="edit-button">Edit</span>
-                </div>
+                </div> -->
 
                 <div class="full-address" fxLayout="column" fxLayoutGap="10px">
-                    <div class="main-address" fxLayout="column">
-                        <span class="text-above-form-field">Address</span>
+                    <div class="main-address" fxLayout="column" fxLayoutGap="6px">
+                        <span class="form-instruction">Address</span>
                         <input class="address-input" type="text">
                     </div>
                     <div class="city-state-fields" fxLayout="row" fxLayoutGap="10px">
-                        <div fxLayout="column">
-                            <span class="text-above-form-field">city/town</span>
+                        <div fxLayout="column" fxLayoutGap="6px">
+                            <span class="form-instruction">city/town</span>
                             <input class="city-state" type="text">
                         </div>
 
-                        <div fxLayout="column">
-                            <span class="text-above-form-field">State</span>
+                        <div fxLayout="column" fxLayoutGap="6px">
+                            <span class="form-instruction">State</span>
                             <input class="city-state" type="text">
                         </div>
                     </div>
-                </div>
 
-                <div class="address-suggest" fxLayout="column">
-                    <mat-radio-button value="1">2.Home</mat-radio-button>
-                    <div class="main-address" fxLayout="column">
-                        <span class="text-above-form-field">Address</span>
-                        <input class="suggestion-input" type="text">
+                    <div class="type" fxLayout="column" fxLayoutGap="6px">
+                        <span class="form-instruction">Type</span>
+                        <mat-radio-group aria-label="Select an option" fxLayoutGap="110px">
+                            <mat-radio-button value="1">Home</mat-radio-button>
+                            <mat-radio-button value="2">Work</mat-radio-button>
+                            <mat-radio-button value="2">Other</mat-radio-button>
+                        </mat-radio-group>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
-
-
 </div>
 <app-footer></app-footer>
