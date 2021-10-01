@@ -1,0 +1,80 @@
+.container{
+    min-height: calc(100vh - 60px - 60px);
+}
+
+.home-count{
+    margin-left: 240px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.home{
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #9D9D9D;
+    cursor: pointer;
+}
+
+.my-cart{
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+}
+
+.edit-button{
+    text-align: left;
+    font: normal normal medium 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #A03037;
+}
+
+.customer-detail-heading{
+    text-align: left;
+    // font: normal normal medium 18px/24px Roboto;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight:500;
+    letter-spacing: 0px;
+    color: #333232;
+}
+
+.form-fields{
+    margin-left: 270px;
+}
+
+.input-fields{
+    margin-top: 25px;
+}
+
+.personal-detail-input{
+    width: 511px;
+    height: 45px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 2px;
+}
+
+.form-instruction{
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    text-transform: capitalize;
+}
+
+.new-address-button{
+    width: 150px;
+    height: 35px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #A03037;
+    border-radius: 2px;
+}
+
+.new-address-text{
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #A03037;
+}

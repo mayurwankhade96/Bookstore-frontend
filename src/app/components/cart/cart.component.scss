@@ -22,18 +22,6 @@
     margin-left: 102px;
 }
 
-.single-book{
-    // width: 774px;
-    // height: 251px;
-    // background: #FFFFFF 0% 0% no-repeat padding-box;
-    // border: 1px solid rgba($color: #707070, $alpha: 0.24);
-    // border-radius: 1px;
-}
-
-// .book-info{
-//     margin-left: 38px;
-// }
-
 .book-image{
     width: 65px;
     height: 85px;
@@ -318,4 +306,15 @@
     letter-spacing: 0px;
     color: #333232;
     margin-left: 36px;
+}
+
+@media only screen and (max-width:965px){
+    .container{
+        margin: 0 auto;
+    }
+
+    .book-section{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

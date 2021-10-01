@@ -31,7 +31,9 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { OrderComponent } from './components/order/order.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { ProfileComponent } from './components/profile/profile.component';
+import { AuthguardService } from './services/authguard.service';
+import { DisplayOrdersComponent } from './components/display-orders/display-orders.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { MatMenuModule } from '@angular/material/menu';
     FooterComponent,
     CartComponent,
     WishlistComponent,
-    OrderComponent
+    OrderComponent,
+    ProfileComponent,
+    DisplayOrdersComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -69,7 +73,9 @@ import { MatMenuModule } from '@angular/material/menu';
     NgxPaginationModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { response } from 'express';
 import { AddressService } from 'src/app/services/address.service';
 import { CartService } from 'src/app/services/cart.service';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-cart',
@@ -20,7 +21,9 @@ export class CartComponent implements OnInit
   // displayContinueButton = true;
 
   constructor(private cartService: CartService,
-    private addressService: AddressService) { }
+    private addressService: AddressService,
+    private orderService: OrderService,
+    private route: Router) { }
 
   ngOnInit(): void
   {
@@ -60,5 +63,14 @@ export class CartComponent implements OnInit
   submit()
   {
     this.displayCart = !this.displayCart;
+  }
+
+  placeOrder(data: any)
+  {
+    this.orderService.placeOrder(data).subscribe((response: any) =>
+    {
+      console.log(response);
+      this.route.navigate(['order']);
+    })
   }
 }
